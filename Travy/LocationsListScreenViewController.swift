@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import os.log
 
 class LocationsListScreenViewController: UIViewController {
 
@@ -42,7 +43,19 @@ class LocationsListScreenViewController: UIViewController {
              
             return tempLocations
         }
-       
+    
+    
+    
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            locations.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
     }
 
     extension LocationsListScreenViewController: UITableViewDataSource, UITableViewDelegate {
@@ -63,3 +76,5 @@ class LocationsListScreenViewController: UIViewController {
     }
 
 }
+
+
