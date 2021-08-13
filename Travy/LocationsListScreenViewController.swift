@@ -19,6 +19,8 @@ class LocationsListScreenViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             
+            title = "Destinations"
+            navigationController?.navigationBar.prefersLargeTitles = true
             locations = createArray()
                 
         }
