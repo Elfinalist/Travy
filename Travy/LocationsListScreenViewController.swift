@@ -11,7 +11,8 @@ import os.log
 class LocationsListScreenViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
-
+    @IBOutlet var searchBar: UISearchBar!
+    
         var locations: [Location] = []
         
         
