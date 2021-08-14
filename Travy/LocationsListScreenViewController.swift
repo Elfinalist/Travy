@@ -8,46 +8,31 @@
 import UIKit
 import os.log
 
-class LocationsListScreenViewController: UIViewController {
+class LocationsListScreenViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     
-        var locations: [Location] = []
+        var locations: [Location]!
+        var searching = false
         
-        
+        var locationArray = [Location]()
 
         override func viewDidLoad() {
             super.viewDidLoad()
             
             title = "Destinations"
             navigationController?.navigationBar.prefersLargeTitles = true
-            locations = createArray()
-                
+            
+            searchBar.delegate = self
+            
+            locationArray = ["Dubai","Ireland","Durban","Mombasa","Monaco","Sydney","Guangzhou","Amazon","Honolulu","Borabora","Athens"]
+                .map(Location.init(title:))
+            locations = locationArray
+            
+        
         }
         
-        func createArray() -> [Location] {
-            
-            var tempLocations: [Location] = []
-            
-            let location1 = Location(image: UIImage(named: "Dubai")!, title: "Dubai")
-            let location2 = Location(image: UIImage(named: "Ireland")!, title: "Ireland")
-            let location3 = Location(image: UIImage(named: "Durban")!, title: "Durban")
-            let location4 = Location(image: UIImage(named: "Mombasa")!, title: "Mombasa")
-            let location5 = Location(image: UIImage(named: "Monaco")!, title: "Monaco")
-            let location6 = Location(image: UIImage(named: "Serengeti")!, title: "Serengeti")
-            
-            tempLocations.append(location1)
-            tempLocations.append(location2)
-            tempLocations.append(location3)
-            tempLocations.append(location4)
-            tempLocations.append(location5)
-            tempLocations.append(location6)
-             
-            return tempLocations
-        }
-    
-    
     
      func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -64,7 +49,13 @@ class LocationsListScreenViewController: UIViewController {
     extension LocationsListScreenViewController: UITableViewDataSource, UITableViewDelegate {
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return locations.count
+            
+            if searching {
+                return locations.count
+            } else {
+                return locationArray.count
+            }
+            
         }
          
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -73,11 +64,34 @@ class LocationsListScreenViewController: UIViewController {
             
             cell.setLocation(location: location)
             
+            
+            if searching
+            {
+                cell.locationTitleLabel?.text = locations[indexPath.row].title
+                cell.locationImageView?.image = locations[indexPath.row].image
+            }else{
+                cell.locationTitleLabel?.text = locationArray[indexPath.row].title
+                cell.locationImageView?.image = locationArray[indexPath.row].image
+            }
+            
             return cell
         
         
     }
 
+        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            locations = locationArray.filter({$0.title.prefix(searchText.count) == searchText})
+            searching = true
+            tableView.reloadData()
+            
+        }
+        
+//        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//            searching = false
+//            searchBar.text = ""
+//            tableView.reloadData()
+//        }
+    
 }
-
+    
 

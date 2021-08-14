@@ -9,13 +9,13 @@ import Foundation
 import UIKit
 
 
-class Location {
+struct Location {
 
     var image: UIImage
     var title: String
     
-    init(image: UIImage, title: String) {
-        self.image = image
+    init(title: String) {
         self.title = title
+        image = UIImage(named: title)!
     }
 }
