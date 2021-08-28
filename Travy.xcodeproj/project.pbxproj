@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20BB65F782FD0D5D46230466 /* libPods-Travy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0302F9AFE7C68B959D2C4164 /* libPods-Travy.a */; };
 		801EE62E26C5161900E2387D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801EE62D26C5161900E2387D /* AppDelegate.swift */; };
 		801EE63026C5161A00E2387D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801EE62F26C5161A00E2387D /* SceneDelegate.swift */; };
 		801EE63526C5161A00E2387D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801EE63326C5161A00E2387D /* Main.storyboard */; };
@@ -14,9 +15,12 @@
 		801EE63A26C5161D00E2387D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801EE63826C5161D00E2387D /* LaunchScreen.storyboard */; };
 		801EE64526C5161E00E2387D /* TravyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801EE64426C5161E00E2387D /* TravyTests.swift */; };
 		801EE65026C5161E00E2387D /* TravyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801EE64F26C5161E00E2387D /* TravyUITests.swift */; };
-		801EE66F26C51A8A00E2387D /* LocationsListScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801EE66E26C51A8A00E2387D /* LocationsListScreenViewController.swift */; };
+		801EE66F26C51A8A00E2387D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801EE66E26C51A8A00E2387D /* ViewController.swift */; };
 		801EE67726C522BA00E2387D /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801EE67626C522BA00E2387D /* LocationCell.swift */; };
 		801EE67F26C5243400E2387D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801EE67E26C5243400E2387D /* Location.swift */; };
+		80712EBC26D7A97800415409 /* LocationsListScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80712EBB26D7A97800415409 /* LocationsListScreenViewController.swift */; };
+		80F018EC26D2BDE9007921A7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F018EB26D2BDE9007921A7 /* MapKit.framework */; };
+		80F018F126D52B77007921A7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 80F018F026D52B77007921A7 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0302F9AFE7C68B959D2C4164 /* libPods-Travy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		801EE62A26C5161900E2387D /* Travy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		801EE62D26C5161900E2387D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		801EE62F26C5161A00E2387D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,9 +55,14 @@
 		801EE64B26C5161E00E2387D /* TravyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		801EE64F26C5161E00E2387D /* TravyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravyUITests.swift; sourceTree = "<group>"; };
 		801EE65126C5161E00E2387D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		801EE66E26C51A8A00E2387D /* LocationsListScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListScreenViewController.swift; sourceTree = "<group>"; };
+		801EE66E26C51A8A00E2387D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		801EE67626C522BA00E2387D /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		801EE67E26C5243400E2387D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		80712EBB26D7A97800415409 /* LocationsListScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListScreenViewController.swift; sourceTree = "<group>"; };
+		80F018EB26D2BDE9007921A7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		80F018F026D52B77007921A7 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		EC97C0516E827AE9B4CBF8DE /* Pods-Travy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travy.debug.xcconfig"; path = "Target Support Files/Pods-Travy/Pods-Travy.debug.xcconfig"; sourceTree = "<group>"; };
+		F17DD746CAD5E7D5942FD921 /* Pods-Travy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travy.release.xcconfig"; path = "Target Support Files/Pods-Travy/Pods-Travy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80F018EC26D2BDE9007921A7 /* MapKit.framework in Frameworks */,
+				20BB65F782FD0D5D46230466 /* libPods-Travy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,13 +92,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5ECC9C6034CBA5168735F018 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80F018EB26D2BDE9007921A7 /* MapKit.framework */,
+				0302F9AFE7C68B959D2C4164 /* libPods-Travy.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		801EE62126C5161900E2387D = {
 			isa = PBXGroup;
 			children = (
+				80F018F026D52B77007921A7 /* Podfile */,
 				801EE62C26C5161900E2387D /* Travy */,
 				801EE64326C5161E00E2387D /* TravyTests */,
 				801EE64E26C5161E00E2387D /* TravyUITests */,
 				801EE62B26C5161900E2387D /* Products */,
+				BA99E4DB449143BFDBD8582E /* Pods */,
+				5ECC9C6034CBA5168735F018 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,9 +129,10 @@
 			children = (
 				801EE62D26C5161900E2387D /* AppDelegate.swift */,
 				801EE62F26C5161A00E2387D /* SceneDelegate.swift */,
-				801EE66E26C51A8A00E2387D /* LocationsListScreenViewController.swift */,
+				801EE66E26C51A8A00E2387D /* ViewController.swift */,
 				801EE67626C522BA00E2387D /* LocationCell.swift */,
 				801EE67E26C5243400E2387D /* Location.swift */,
+				80712EBB26D7A97800415409 /* LocationsListScreenViewController.swift */,
 				801EE63326C5161A00E2387D /* Main.storyboard */,
 				801EE63626C5161D00E2387D /* Assets.xcassets */,
 				801EE63826C5161D00E2387D /* LaunchScreen.storyboard */,
@@ -134,6 +159,15 @@
 			path = TravyUITests;
 			sourceTree = "<group>";
 		};
+		BA99E4DB449143BFDBD8582E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC97C0516E827AE9B4CBF8DE /* Pods-Travy.debug.xcconfig */,
+				F17DD746CAD5E7D5942FD921 /* Pods-Travy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 801EE65426C5161E00E2387D /* Build configuration list for PBXNativeTarget "Travy" */;
 			buildPhases = (
+				CE72A5CEA736552406AECCA5 /* [CP] Check Pods Manifest.lock */,
 				801EE62626C5161900E2387D /* Sources */,
 				801EE62726C5161900E2387D /* Frameworks */,
 				801EE62826C5161900E2387D /* Resources */,
+				B931F914646EB11E94B7B382 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +275,7 @@
 			files = (
 				801EE63A26C5161D00E2387D /* LaunchScreen.storyboard in Resources */,
 				801EE63726C5161D00E2387D /* Assets.xcassets in Resources */,
+				80F018F126D52B77007921A7 /* Podfile in Resources */,
 				801EE63526C5161A00E2387D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,14 +296,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B931F914646EB11E94B7B382 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Travy/Pods-Travy-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Travy/Pods-Travy-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Travy/Pods-Travy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE72A5CEA736552406AECCA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Travy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		801EE62626C5161900E2387D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				801EE66F26C51A8A00E2387D /* LocationsListScreenViewController.swift in Sources */,
+				801EE66F26C51A8A00E2387D /* ViewController.swift in Sources */,
 				801EE62E26C5161900E2387D /* AppDelegate.swift in Sources */,
 				801EE67F26C5243400E2387D /* Location.swift in Sources */,
+				80712EBC26D7A97800415409 /* LocationsListScreenViewController.swift in Sources */,
 				801EE67726C522BA00E2387D /* LocationCell.swift in Sources */,
 				801EE63026C5161A00E2387D /* SceneDelegate.swift in Sources */,
 			);
@@ -441,6 +521,7 @@
 		};
 		801EE65526C5161E00E2387D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC97C0516E827AE9B4CBF8DE /* Pods-Travy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +540,7 @@
 		};
 		801EE65626C5161E00E2387D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F17DD746CAD5E7D5942FD921 /* Pods-Travy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

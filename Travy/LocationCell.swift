@@ -9,8 +9,10 @@ import UIKit
 
 class LocationCell: UITableViewCell {
 
+    
     @IBOutlet var locationImageView: UIImageView!
     @IBOutlet var locationTitleLabel: UILabel!
+    
     
     func setLocation( location: Location) {
         locationImageView.image = location.image

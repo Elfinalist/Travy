@@ -1,0 +1,24 @@
+PODS:
+  - FloatingPanel (2.4.0)
+  - GoogleMaps (5.1.0):
+    - GoogleMaps/Maps (= 5.1.0)
+  - GoogleMaps/Base (5.1.0)
+  - GoogleMaps/Maps (5.1.0):
+    - GoogleMaps/Base
+
+DEPENDENCIES:
+  - FloatingPanel
+  - GoogleMaps (= 5.1.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - FloatingPanel
+    - GoogleMaps
+
+SPEC CHECKSUMS:
+  FloatingPanel: fa60183672ed86313b9e241e34465e82211260e8
+  GoogleMaps: 086ae1dab659eaa7339bdb30fc88e2f44e7c597c
+
+PODFILE CHECKSUM: 38b4ad593368524caab90df25035773cb2397c79
+
+COCOAPODS: 1.10.2
