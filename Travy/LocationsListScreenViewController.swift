@@ -37,6 +37,9 @@ class LocationsListScreenViewController: UIViewController, UITableViewDelegate, 
      }
     
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,6 +68,15 @@ class LocationsListScreenViewController: UIViewController, UITableViewDelegate, 
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DestinationViewController") as? DestinationViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
        if editingStyle == .delete {
            // Delete the row from the data source
