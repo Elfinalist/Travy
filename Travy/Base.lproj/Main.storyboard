@@ -394,6 +394,7 @@
                         <outlet property="Mimage" destination="zEe-d6-WY7" id="WMn-9M-3Y6"/>
                         <outlet property="Tlabel" destination="aNE-ck-r1O" id="Zgv-nF-VRD"/>
                         <outlet property="Wlabel" destination="U40-GT-ZR8" id="qeI-kt-Jxb"/>
+                        <outlet property="bkgrndView" destination="nkI-sH-sYN" id="tmq-5x-NDp"/>
                         <outlet property="flabel" destination="PDW-Po-bYG" id="zM2-4W-B5P"/>
                     </connections>
                 </viewController>

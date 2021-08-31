@@ -65,14 +65,18 @@ class LocationsListScreenViewController: UIViewController, UITableViewDelegate, 
             cell.locationImageView?.image = locationArray[indexPath.row].image
         }
         
+        
+        
+        
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DestinationViewController") as? DestinationViewController
+        vc?.image = locationArray[indexPath.row].image
+        vc?.name = locationArray[indexPath.row].title
         self.navigationController?.pushViewController(vc!, animated: true)
     }
-    
     
     
     

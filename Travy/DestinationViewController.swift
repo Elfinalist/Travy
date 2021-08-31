@@ -21,16 +21,19 @@ class DestinationViewController: UIViewController {
     
     @IBOutlet var flabel: UILabel!
     
+    @IBOutlet var bkgrndView: UIView!
     
-    
+    var image = UIImage()
+    var name = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Llabel.text = " \(name) "
+        Mimage.image = image
+        
      }
-    
-
-
+  
 
 }
