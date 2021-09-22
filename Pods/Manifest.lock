@@ -1,24 +1,38 @@
 PODS:
+  - Alamofire (4.9.1)
   - FloatingPanel (2.4.0)
   - GoogleMaps (5.1.0):
     - GoogleMaps/Maps (= 5.1.0)
   - GoogleMaps/Base (5.1.0)
   - GoogleMaps/Maps (5.1.0):
     - GoogleMaps/Base
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
   - FloatingPanel
   - GoogleMaps (= 5.1.0)
+  - NVActivityIndicatorView
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - FloatingPanel
     - GoogleMaps
+    - NVActivityIndicatorView
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   FloatingPanel: fa60183672ed86313b9e241e34465e82211260e8
   GoogleMaps: 086ae1dab659eaa7339bdb30fc88e2f44e7c597c
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 38b4ad593368524caab90df25035773cb2397c79
+PODFILE CHECKSUM: fbae3c914733647a744f656f9619005d6d3fafa3
 
 COCOAPODS: 1.10.2

@@ -24,7 +24,7 @@ class ViewController:UIViewController, FloatingPanelControllerDelegate {
         // End floating Panel
         
         // Start Map
-        GMSServices.provideAPIKey("AIzaSyB6v9m4ENGlUtZsyPUM7Dh4DMN1-QjQRjU")
+        GMSServices.provideAPIKey("AIzaSyB9GQHQsh3QFdLftBgms6pNm9g04fhZgEw")
         
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
         let mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 64, width: self.view.frame.size.width, height: self.view.frame.size.height), camera: camera)
@@ -40,3 +40,10 @@ class ViewController:UIViewController, FloatingPanelControllerDelegate {
         self.view.bringSubviewToFront(fpc.view)
     }
  }
+
+ 
+ //https://maps.googleapis.com/maps/api/geocode/json?address=10+Princes+Street+Edinburgh+Scotland&key=AIzaSyB9GQHQsh3QFdLftBgms6pNm9g04fhZgEw
+
+ //https://maps.googleapis.com/maps/api/geocode/json?latlng=-33.86,151.20&key=AIzaSyB9GQHQsh3QFdLftBgms6pNm9g04fhZgEw
+
+ //https://console.cloud.google.com/google/maps-apis/metrics?project=keen-hangar-323210
