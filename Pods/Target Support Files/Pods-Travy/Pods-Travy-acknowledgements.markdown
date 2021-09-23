@@ -53,6 +53,10 @@ SOFTWARE.
 
 Copyright 2021 Google
 
+## GooglePlaces
+
+Copyright 2021 Google
+
 ## NVActivityIndicatorView
 
 The MIT License (MIT)

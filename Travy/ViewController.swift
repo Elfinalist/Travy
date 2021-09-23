@@ -4,9 +4,16 @@
 //
 import UIKit
 import GoogleMaps
+import MapKit
 import FloatingPanel
  
-class ViewController:UIViewController, FloatingPanelControllerDelegate {
+ class ViewController:UIViewController, FloatingPanelControllerDelegate, UISearchResultsUpdating{
+
+    
+    
+    let mapView = MKMapView()
+    
+    let searchVC = UISearchController(searchResultsController: ResultsViewController())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +31,26 @@ class ViewController:UIViewController, FloatingPanelControllerDelegate {
         // End floating Panel
         
         // Start Map
-        GMSServices.provideAPIKey("AIzaSyB9GQHQsh3QFdLftBgms6pNm9g04fhZgEw")
-        
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 64, width: self.view.frame.size.width, height: self.view.frame.size.height), camera: camera)
+        title = "Maps"
         view.addSubview(mapView)
-        
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
-        // End Map
+        searchVC.searchBar.backgroundColor = .secondarySystemBackground
+        searchVC.searchResultsUpdater = self
+        navigationItem.searchController = searchVC
+
         
         self.view.bringSubviewToFront(fpc.view)
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        mapView.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.frame.size.width, height: view.frame.size.height - view.safeAreaInsets.top)
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
+    
  }
 
  
@@ -47,3 +59,10 @@ class ViewController:UIViewController, FloatingPanelControllerDelegate {
  //https://maps.googleapis.com/maps/api/geocode/json?latlng=-33.86,151.20&key=AIzaSyB9GQHQsh3QFdLftBgms6pNm9g04fhZgEw
 
  //https://console.cloud.google.com/google/maps-apis/metrics?project=keen-hangar-323210
+
+ 
+ 
+// let lattitudeary = ["28.5355","28.7041","29.9457","30.0869"]
+// let longitudeary = ["77.3910","77.1025","78.1642","78.2676"]
+// for i in 0..<lattitudeary.count { var marker = GMSMarker()
+//    marker.position = CLLocationCoordinate2D(latitude: Double(lattitudeary[i])!, longitude: Double(longitudeary[i])!) marker.map = mapView }
