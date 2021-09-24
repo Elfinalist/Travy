@@ -47,6 +47,24 @@ import FloatingPanel
     }
     
     func updateSearchResults(for searchController: UISearchController) {
+        guard let query = searchController.searchBar.text,
+              !query.trimmingCharacters(in: .whitespaces).isEmpty,
+              let resultsVC = searchController.searchResultsController as? ResultsViewController else {
+            return
+        }
+        
+        GooglePlacesManager.shared.findPlaces(query: query) { (result) in
+            switch result {
+            case.success(let places):
+                DispatchQueue.main.async {
+                    resultsVC.update(with: places)
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
         
     }
     

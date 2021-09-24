@@ -20,7 +20,6 @@
 		801EE67F26C5243400E2387D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801EE67E26C5243400E2387D /* Location.swift */; };
 		80712EBC26D7A97800415409 /* LocationsListScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80712EBB26D7A97800415409 /* LocationsListScreenViewController.swift */; };
 		80712ECA26DCCE4E00415409 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80712EC926DCCE4E00415409 /* DestinationViewController.swift */; };
-		807DC84526FB62D000F71F21 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807DC84426FB62D000F71F21 /* Places.swift */; };
 		80BFCC2126E21D6D00877AAF /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BFCC1F26E21D6D00877AAF /* WeatherTableViewCell.swift */; };
 		80BFCC2226E21D6D00877AAF /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80BFCC2026E21D6D00877AAF /* WeatherTableViewCell.xib */; };
 		80BFCC2B26E21DAC00877AAF /* HourlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BFCC2926E21DAC00877AAF /* HourlyTableViewCell.swift */; };
@@ -28,6 +27,7 @@
 		80F018EC26D2BDE9007921A7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F018EB26D2BDE9007921A7 /* MapKit.framework */; };
 		80F018F126D52B77007921A7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 80F018F026D52B77007921A7 /* Podfile */; };
 		80F53D8626FCB45C004031C7 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F53D8526FCB45C004031C7 /* ResultsViewController.swift */; };
+		80F53D9526FCC29A004031C7 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F53D9426FCC29A004031C7 /* GooglePlacesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,6 @@
 		801EE67E26C5243400E2387D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		80712EBB26D7A97800415409 /* LocationsListScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListScreenViewController.swift; sourceTree = "<group>"; };
 		80712EC926DCCE4E00415409 /* DestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
-		807DC84426FB62D000F71F21 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		80BFCC1F26E21D6D00877AAF /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		80BFCC2026E21D6D00877AAF /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
 		80BFCC2926E21DAC00877AAF /* HourlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		80F018EB26D2BDE9007921A7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		80F018F026D52B77007921A7 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		80F53D8526FCB45C004031C7 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		80F53D9426FCC29A004031C7 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		EC97C0516E827AE9B4CBF8DE /* Pods-Travy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travy.debug.xcconfig"; path = "Target Support Files/Pods-Travy/Pods-Travy.debug.xcconfig"; sourceTree = "<group>"; };
 		F17DD746CAD5E7D5942FD921 /* Pods-Travy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travy.release.xcconfig"; path = "Target Support Files/Pods-Travy/Pods-Travy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,7 +148,6 @@
 				801EE66E26C51A8A00E2387D /* ViewController.swift */,
 				801EE67626C522BA00E2387D /* LocationCell.swift */,
 				801EE67E26C5243400E2387D /* Location.swift */,
-				807DC84426FB62D000F71F21 /* Places.swift */,
 				80712EBB26D7A97800415409 /* LocationsListScreenViewController.swift */,
 				801EE63326C5161A00E2387D /* Main.storyboard */,
 				801EE63626C5161D00E2387D /* Assets.xcassets */,
@@ -156,6 +155,7 @@
 				801EE63B26C5161D00E2387D /* Info.plist */,
 				80712EC926DCCE4E00415409 /* DestinationViewController.swift */,
 				80F53D8526FCB45C004031C7 /* ResultsViewController.swift */,
+				80F53D9426FCC29A004031C7 /* GooglePlacesManager.swift */,
 			);
 			path = Travy;
 			sourceTree = "<group>";
@@ -382,13 +382,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80F53D9526FCC29A004031C7 /* GooglePlacesManager.swift in Sources */,
 				80F53D8626FCB45C004031C7 /* ResultsViewController.swift in Sources */,
 				80BFCC2126E21D6D00877AAF /* WeatherTableViewCell.swift in Sources */,
 				80BFCC2B26E21DAC00877AAF /* HourlyTableViewCell.swift in Sources */,
 				80712ECA26DCCE4E00415409 /* DestinationViewController.swift in Sources */,
 				801EE66F26C51A8A00E2387D /* ViewController.swift in Sources */,
 				801EE62E26C5161900E2387D /* AppDelegate.swift in Sources */,
-				807DC84526FB62D000F71F21 /* Places.swift in Sources */,
 				801EE67F26C5243400E2387D /* Location.swift in Sources */,
 				80712EBC26D7A97800415409 /* LocationsListScreenViewController.swift in Sources */,
 				801EE67726C522BA00E2387D /* LocationCell.swift in Sources */,
